@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin-top: 0;
+    margin-left: 0;
+    font-family: 'Poppins';
+}
+html {
+    scroll-behavior: smooth;
+  }
+a{
+    text-decoration: none;
+}
+body{
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+    width: 12px;
+}
+body::-webkit-scrollbar-track{
+    background-color: rgb(248, 248, 248);
+}
+body::-webkit-scrollbar-thumb{
+    background: rgb(190, 190, 190);
+}
+/*Loading screen*/
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(243, 241, 241);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border-radius: 5%;
+    background: rgb(14, 14, 14);
+    animation: loader 1s infinite ease-in-out alternate;
+}
+@keyframes loader{
+    0% { transform: rotate(90deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(270deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(0deg);}
+}
+/*Navigation*/
+nav{
+    top: 0;
+    position: fixed;
+    height: 65px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.452);
+    transition: 300ms;
+
+}
+.navButton{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-inline: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+}
+.navButton:first-child{
+    margin-right: 10px;
+}
+.navButton:hover{
+    transition: 300ms;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.575);
+    text-shadow: 1px 1px 2px white;
+    border-bottom: 2px solid rgb(36, 138, 255);
+}
+/*Navigation*/
+main{
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*home*/
+.div1wrapper{
+    width: 100vw;
+}
+.div1{
+    height: 75vh;
+    width: 100vw;
+    background: url("/images/sample.jpg");
+    -webkit-background-size: cover;
+    display: table-cell;
+    vertical-align: middle;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+    border-bottom: 2px solid rgb(36, 138, 255);
+}
+.div1 h1{
+    font-size: 50px;
+}
+.div1 h3{
+    color: rgba(255, 255, 255, 0.692);
+    font-size: 22px;
+}
+/*page sections h1*/
+.pageh1{
+    padding-top: 5%;
+    font-size: 42px;
+    letter-spacing: 3px;
+    text-align: center;
+    padding-top: 100px;
+    color: rgb(41, 41, 41);
+}
+.divwrapper{
+    display: flex;
+    justify-content: center;
+}
+.div2{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 70vw;
+    border-bottom: 2px solid rgb(36, 138, 255); 
+}
+.div2:hover{
+    transition: 300ms;
+    background-color: rgb(248, 248, 248);
+}
+#noborder{
+    border-bottom: 2px solid transparent; 
+}
+/*about section*/
+.div2-1{
+    width: 35%;
+    padding: 40px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+.div2-2{
+    width: 35%;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.div2-2 img{
+    height: 20vw;
+    border: 1px solid black;
+}
+/*skills section*/
+.charth2{
+    text-align: center;
+    color: rgb(36, 138, 255);
+}
+/*contact section*/
+.form-wrapper{
+    color: rgb(36, 138, 255);
+    width: 600px;
+    font-weight: bold;
+}
+.form-wrapper label{
+    font-size: 25px;
+    padding: 7%;
+}
+.emailInput{
+    width: 80%;
+    margin-left: 7%;
+    height: 40px;
+    font-size: 20px;
+}
+.formDiv2{
+    margin-top: 7%;
+}
+.commentInput{
+    width: 80%;
+    margin-left: 7%;
+    height: 9vw;
+    font-size: 15px;
+}
+.sendDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.sendDiv button{
+    margin-top: 4%;
+    margin-bottom: 2%;
+    height: 50px;
+    width: 120px;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 25px;
+    color: rgb(36, 138, 255);
+    border: 2px solid rgb(36, 138, 255);
+    background-color: white;
+}
+.sendDiv button:hover{
+    background-color: black;
+    color: white;
+    border: 2px solid rgb(0, 0, 0);
+    transition: 300ms;
+}
+/*socialbar section*/
+.socialBar{
+    height: 70px;
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 1px rgba(54, 54, 54, 0.733), 2px 2px 2px rgba(24, 24, 24, 0.226);
+}
+.socialBar img{
+    width: 40px;
+    height: 40px;
+    margin-inline: 19px;
+}
+.socialBar img:hover{
+    width: 45px;
+    height: 45px;
+    transition: 150ms;
+}
+/*art/works section*/
+.carousel-inner{
+    width: 70vw;
+}
+.carousel-inner img{
+    width: 100%;
+    height: 100%;
+}
+.carousel-item{
+    transition: transform 2s;
+    height: 750px;
+    width: 70vw;
+}
+.carousel{
+    margin-bottom: 15px;
+}
+
+@media(max-width: 1600px)
+{
+    .div2-1{
+        font-size: 22px;
+    }
+    .div2-2 img{
+        height: 22vw;
+    }
+}
+@media(max-width: 1366px)
+{
+    .div2-1{
+        font-size: 20px;
+    }
+    .div2-2 img{
+        height: 25vw;
+    }
+}
+@media(max-width: 1280px)
+{
+    nav{
+        justify-content: center;
+    }
+    .navButton:first-child{
+        margin-right: 0px;
+    }
+    .div2{
+        width: 100vw;
+    }
+    .div2-1{
+        width: 40%;
+        font-size: 22px;
+    }
+    .div2-2{
+        width: 40%;
+    }
+    .div2-2 img{
+        height: 27vw;
+    }
+    .carousel-inner{
+        width: 90vw;
+    }
+    .carousel-inner img{
+        width: 100%;
+    }
+    .carousel-item{
+        transition: transform 2s;
+        height: 600px;
+        width: 90vw;
+    }
+}
+@media(max-width: 1024px)
+{
+    .div2{
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+    .div2-1{
+        width: 100%;
+        padding: 40px;
+        font-size: 25px;
+        display: flex;
+        align-items: center;
+    }
+    .div2-2{
+        width: 100%;
+        align-items: center;
+    }
+    .div2-2 img{
+        height: 40vw;
+    }
+}
+@media(max-width: 800px)
+{
+    .carousel-inner{
+        width: 95vw;
+    }
+    .carousel-inner img{
+        width: 100%;
+    }
+    .carousel-item{
+        height: 400px;
+        width: 95vw;
+    }
+    .carousel{
+        margin-bottom: 10px;
+    }
+}
+@media(max-width: 768px)
+{
+    .navButton{
+        padding-inline: 15px;
+        font-size: 20px;
+    }
+    .pageh1{
+        font-size: 35px;
+        letter-spacing: 3px;
+    }
+    .div2-1{
+        font-size: 19px;
+    }
+    .div2-2 img{
+        height: 50vw;
+    }
+    .form-wrapper{
+        color: rgb(36, 138, 255);
+        width: 425px;
+    }
+    .sendDiv button{
+        height: 40px;
+        width: 100px;
+        font-size: 18px;
+    }
+    .socialBar{
+        height: 50px;
+    }
+    .socialBar img{
+        width: 30px;
+        height: 30px;
+        margin-inline: 15px;
+    }
+    .socialBar img:hover{
+        width: 30px;
+        height: 30px;
+    }
+}
+@media(max-width: 630px)
+{
+    .navButton{
+        padding-inline: 10px;
+        font-size: 18px;
+    }
+}
+@media(max-width: 525px)
+{
+    nav{
+        height: 50px;
+    }
+    .navButton{
+        font-size: 14px;
+    }
+    .socialBar{
+        height: 40px;
+    }
+    .socialBar img{
+        width: 25px;
+        height: 25px;
+        margin-inline: 10px;
+    }
+    .socialBar img:hover{
+        width: 25px;
+        height: 25px;
+    }
+}
+@media(max-width: 425px)
+{
+    .navButton{
+        font-size: 12px;
+    }
+    .div1 h1{
+        font-size: 40px;
+    }
+    .div1 h3{
+        font-size: 19px;
+    }
+    .form-wrapper{
+        width: 320px;
+    }
+    .carousel-item{
+        height: 300px;
+    }
+}
+@media(max-width: 375px)
+{
+    .navButton{
+        font-size: 10px;
+    }
+    .div1 h1{
+        font-size: 35px;
+    }
+    .div1 h3{
+        font-size: 17px;
+    }
+    .socialBar{
+        height: 30px;
+    }
+    .socialBar img{
+        width: 20px;
+        height: 20px;
+        margin-inline: 10px;
+    }
+    .socialBar img:hover{
+        width: 20px;
+        height: 20px;
+    }
+}
